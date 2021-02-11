@@ -1,15 +1,17 @@
 // Write password to the #password input
 function writePassword() {
+  
+  
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  
+  passwordText.value = password;
+  
+}
 
-    
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
-  
-    passwordText.value = password;
-  }
-  
 
 function generatePassword(){}
+
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -69,8 +71,8 @@ var randomPassword =[];
 
 // pulling one random character out, do it passwordLenght times (with a loop)
 for (var i =0; i<=passwordLength; i++){
-var randomPassword = Math.floor(Math.random() * combinedChars.length);
-// console.log(randomPassword, combinedChars[randomPassword]); // 5, "A"
+  var randomPassword = Math.floor(Math.random() * combinedChars.length);
+  // console.log(randomPassword, combinedChars[randomPassword]); // 5, "A"
 }
 
 randomPassword+=lowerCaseChars;
@@ -78,4 +80,4 @@ randomPassword+=upperCaseChars;
 randomPassword+=numbers;
 randomPassword+=specChar;
 
-
+// passwordText.textContent = randomPassword[];
